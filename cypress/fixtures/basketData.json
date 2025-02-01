@@ -1,0 +1,13 @@
+{
+  "first_name": "Cypress",
+  "last_name": "Smith",
+  "email": "email@cypress.com",
+  "adress": "Main Street",
+  "country": "United Kingdom",
+  "city": "Bristol",
+  "zip": "00-00-000",
+  "cc_name": "Cypress Smith",
+  "cc_number": "123456789",
+  "cc_expiration": "01/2030",
+  "cc_cvv":"123"
+}

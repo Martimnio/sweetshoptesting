@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-02-01T13:53:10.877Z",
-    "end": "2025-02-01T13:53:12.720Z",
-    "duration": 1843,
+    "start": "2025-02-01T14:08:28.359Z",
+    "end": "2025-02-01T14:08:30.480Z",
+    "duration": 2121,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9e08ed7b-1888-413d-913d-38c58330f10a",
+      "uuid": "f234b757-c4cd-435f-8691-7e419d62ea64",
       "title": "",
       "fullFile": "cypress/e2e/login.cy.js",
       "file": "cypress/e2e/login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dfee2bad-f90e-4ecf-9dfc-d11d24c02a32",
+          "uuid": "d1f050ea-4aed-434f-a322-641cbd2d3bca",
           "title": "Login page",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "29c8f903-e994-40ed-97a0-e88a8d00817a",
+              "uuid": "a2c6f340-fcfd-433d-9750-ffa72514a1a9",
               "title": "Login feature",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Try to login with no credencials should inform the user the lack of information",
                   "fullTitle": "Login page Login feature Try to login with no credencials should inform the user the lack of information",
                   "timedOut": null,
-                  "duration": 551,
+                  "duration": 921,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "cy.visit('https://sweetshop.netlify.app/');\ncy.get(_locators.default.login_button_nav).click();\ncy.contains('button', 'Login').click();\ncy.get(':nth-child(1) > .invalid-feedback').should(\"contain\", \"Please enter a valid email address.\");\ncy.get(':nth-child(2) > .invalid-feedback').should(\"contain\", \"Please enter a valid password.\");",
                   "err": {},
-                  "uuid": "c34acb6c-6b41-4811-9516-ae23b659870e",
-                  "parentUUID": "29c8f903-e994-40ed-97a0-e88a8d00817a",
+                  "uuid": "a210d9bb-1e07-42ce-a137-f6e8e1fa304a",
+                  "parentUUID": "a2c6f340-fcfd-433d-9750-ffa72514a1a9",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c34acb6c-6b41-4811-9516-ae23b659870e"
+                "a210d9bb-1e07-42ce-a137-f6e8e1fa304a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 551,
+              "duration": 921,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

@@ -1,5 +1,5 @@
-import loc from "../../../sweetshop/cypress/locators/locators.js"
-const data = require(`../../../sweetshop/cypress/fixtures/basketData.json`)
+import loc from "../sweetshop/cypress/locators/locators.js"
+const data = require(`../sweetshop/cypress/fixtures/basketData.json`)
 
 describe('Basket features', () => {
   beforeEach(()=>{

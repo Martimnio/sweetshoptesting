@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-01T13:53:10.877Z",
+    "end": "2025-02-01T13:53:12.720Z",
+    "duration": 1843,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e08ed7b-1888-413d-913d-38c58330f10a",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dfee2bad-f90e-4ecf-9dfc-d11d24c02a32",
+          "title": "Login page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "29c8f903-e994-40ed-97a0-e88a8d00817a",
+              "title": "Login feature",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Try to login with no credencials should inform the user the lack of information",
+                  "fullTitle": "Login page Login feature Try to login with no credencials should inform the user the lack of information",
+                  "timedOut": null,
+                  "duration": 551,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://sweetshop.netlify.app/');\ncy.get(_locators.default.login_button_nav).click();\ncy.contains('button', 'Login').click();\ncy.get(':nth-child(1) > .invalid-feedback').should(\"contain\", \"Please enter a valid email address.\");\ncy.get(':nth-child(2) > .invalid-feedback').should(\"contain\", \"Please enter a valid password.\");",
+                  "err": {},
+                  "uuid": "c34acb6c-6b41-4811-9516-ae23b659870e",
+                  "parentUUID": "29c8f903-e994-40ed-97a0-e88a8d00817a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c34acb6c-6b41-4811-9516-ae23b659870e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 551,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "screenshotsFolder": "./docs",
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

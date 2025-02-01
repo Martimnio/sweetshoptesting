@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-01T13:53:04.481Z",
+    "end": "2025-02-01T13:53:09.585Z",
+    "duration": 5104,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb38f46c-69c9-4875-8df8-f313cc16a49e",
+      "title": "",
+      "fullFile": "cypress/e2e/basket.cy.js",
+      "file": "cypress/e2e/basket.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "901a6860-80c1-4c27-879c-795e213a9b9a",
+          "title": "Basket features",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A sweet should be added to the basket",
+              "fullTitle": "Basket features A sweet should be added to the basket",
+              "timedOut": null,
+              "duration": 415,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addItemToBasket();\ncy.get('.badge').should(\"contain\", 1);",
+              "err": {},
+              "uuid": "1db16502-372b-494b-9ace-303a66bfdb82",
+              "parentUUID": "901a6860-80c1-4c27-879c-795e213a9b9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A sweet should be added to the basket and then deleted from it",
+              "fullTitle": "Basket features A sweet should be added to the basket and then deleted from it",
+              "timedOut": null,
+              "duration": 403,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addItemToBasket();\ncy.get('.badge').should(\"contain\", 1);\ncy.get(_locators.default.basket_button_nav).click();\ncy.get('#basketCount').should('contain', '1');\ncy.get('.small').click();\ncy.get('#basketCount').should('contain', '0');",
+              "err": {},
+              "uuid": "1ec3beeb-2ccd-49f8-8323-1020b7c2daf1",
+              "parentUUID": "901a6860-80c1-4c27-879c-795e213a9b9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A sweet should be purchased successfuly",
+              "fullTitle": "Basket features A sweet should be purchased successfuly",
+              "timedOut": null,
+              "duration": 2661,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addItemToBasket();\ncy.get('.badge').should(\"contain\", 1);\ncy.get(_locators.default.basket_button_nav).click();\ncy.get(_locators.default.first_name).type(data.first_name);\ncy.get(_locators.default.last_name).type(data.last_name);\ncy.get('#email').type(data.email);\ncy.get('#address').type(data.adress);\ncy.get('#country').select(data.country);\ncy.get('#city').select(data.city);\ncy.get('#zip').type(data.zip);\ncy.get('#cc-name').type(data.cc_name);\ncy.get('#cc-number').type(data.cc_number);\ncy.get('#cc-expiration').type(data.cc_expiration);\ncy.get('#cc-cvv').type(data.cc_cvv);\ncy.get(_locators.default.checkout_button).click();",
+              "err": {},
+              "uuid": "9a39a63d-7e8f-43f6-8e0d-71b68102e533",
+              "parentUUID": "901a6860-80c1-4c27-879c-795e213a9b9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on checkout without informing all the necessary inputs results in a warning to the user",
+              "fullTitle": "Basket features Click on checkout without informing all the necessary inputs results in a warning to the user",
+              "timedOut": null,
+              "duration": 419,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const validation = [{\n  selector: \":nth-child(1) > :nth-child(1) > .invalid-feedback\",\n  message: \"Valid first name is required\"\n}, {\n  selector: \":nth-child(1) > :nth-child(2) > .invalid-feedback\",\n  message: \"Valid last name is required\"\n}, {\n  selector: \".needs-validation > :nth-child(2) > .invalid-feedback\",\n  message: \"Please enter a valid email address for shipping updates\"\n}, {\n  selector: \".needs-validation > :nth-child(3) > .invalid-feedback\",\n  message: \"Please enter your shipping address\"\n}, {\n  selector: \".col-md-5 > .invalid-feedback\",\n  message: \"Please select a valid country\"\n}, {\n  selector: \".col-md-4 > .invalid-feedback\",\n  message: \"Please provide a valid state\"\n}, {\n  selector: \":nth-child(5) > .col-md-3 > .invalid-feedback\",\n  message: \"Zip code required\"\n}, {\n  selector: \":nth-child(8) > :nth-child(1) > .invalid-feedback\",\n  message: \"Name on card is required\"\n}, {\n  selector: \":nth-child(8) > :nth-child(2)\",\n  message: \"Credit card number is required\"\n}, {\n  selector: \":nth-child(9) > :nth-child(1)\",\n  message: \"Expiration date required\"\n}, {\n  selector: \":nth-child(9) > :nth-child(2)\",\n  message: \"Security code required\"\n}];\ncy.addItemToBasket();\ncy.get('.badge').should(\"contain\", 1);\ncy.get(_locators.default.basket_button_nav).click();\ncy.get(_locators.default.checkout_button).click();\nvalidation.forEach(element => {\n  cy.get(element.selector).should('contain', element.message);\n});",
+              "err": {},
+              "uuid": "d8dc51a2-cd34-4c53-bf9d-8f2ce1595d60",
+              "parentUUID": "901a6860-80c1-4c27-879c-795e213a9b9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1db16502-372b-494b-9ace-303a66bfdb82",
+            "1ec3beeb-2ccd-49f8-8323-1020b7c2daf1",
+            "9a39a63d-7e8f-43f6-8e0d-71b68102e533",
+            "d8dc51a2-cd34-4c53-bf9d-8f2ce1595d60"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "screenshotsFolder": "./docs",
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

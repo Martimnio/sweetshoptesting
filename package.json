@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "mocha-test": "mocha /home/pedro/sweetshop/cypress/e2e/*.js"
+    "mocha-test": "mocha cypress/e2e/*.js"
   },
   "keywords": [],
   "author": "",

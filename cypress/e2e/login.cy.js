@@ -1,4 +1,4 @@
-import loc from "../sweetshop/cypress/locators/locators.js"
+import loc from "../locators/locators.js"
 const data = require(`../fixtures/loginData.json`)
 
 describe('Login page', () => {

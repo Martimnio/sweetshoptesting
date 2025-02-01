@@ -55,6 +55,12 @@ jobs:
         with:
           name: cypress-results
           path: cypress/reports
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-results-report
+          path: docs
           
       - name: Deploy report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

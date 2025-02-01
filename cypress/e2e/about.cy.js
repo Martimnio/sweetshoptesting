@@ -1,5 +1,5 @@
 import loc from "../locators/locators.js"
-const data = require(`../sweetshop/cypress/fixtures/loginData.json`)
+const data = require(`../fixtures/loginData.json`)
 
 describe('About page', () => {
   it('Clicking on the About button on the nav should redirect the user to the about page', () => {

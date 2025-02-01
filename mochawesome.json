@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-02-01T14:08:17.976Z",
-    "end": "2025-02-01T14:08:20.338Z",
-    "duration": 2362,
+    "start": "2025-02-01T14:16:58.244Z",
+    "end": "2025-02-01T14:17:00.547Z",
+    "duration": 2303,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c45ab476-3de3-42ff-8e87-dec4a364d91a",
+      "uuid": "961df66d-efe4-4b45-a37f-434b99e7c46d",
       "title": "",
       "fullFile": "cypress/e2e/about.cy.js",
       "file": "cypress/e2e/about.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3c2cd433-c6b4-49b9-b102-847b483df615",
+          "uuid": "70d040d9-a9f7-4662-9a5b-e5e4c6e7c0a0",
           "title": "About page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Clicking on the About button on the nav should redirect the user to the about page",
               "fullTitle": "About page Clicking on the About button on the nav should redirect the user to the about page",
               "timedOut": null,
-              "duration": 1000,
+              "duration": 894,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('https://sweetshop.netlify.app/');\ncy.get(_locators.default.about_button).click();\ncy.url().should('eq', 'https://sweetshop.netlify.app/about');\ncy.get('.display-3').should('contain', 'Sweet Shop Project');\ncy.get('.my-4 > :nth-child(2)').should('contain', 'An intentionally broken web application to help demonstrate Chrome DevTools.');\ncy.get('.my-4 > :nth-child(3)').should('contain', 'Sweet Shop is a project created to help demonstrate some of the great features of the Chrome DevTools');",
               "err": {},
-              "uuid": "b86c089f-4bcc-486d-8683-f34c856f0fb4",
-              "parentUUID": "3c2cd433-c6b4-49b9-b102-847b483df615",
+              "uuid": "4491e44c-513d-42aa-a935-7c52397b4bf0",
+              "parentUUID": "70d040d9-a9f7-4662-9a5b-e5e4c6e7c0a0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b86c089f-4bcc-486d-8683-f34c856f0fb4"
+            "4491e44c-513d-42aa-a935-7c52397b4bf0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1000,
+          "duration": 894,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
